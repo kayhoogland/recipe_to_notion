@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "recipe-to-notion"
+version = "0.1.0"
+description = ""
+authors = ["Kay Hoogland <kayhoogland@hey.com>"]
+readme = "README.md"
+packages = [{include = "recipe_to_notion"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = "^0.89.1"
+recipe-scrapers = "^14.29.0"
+uvicorn = "^0.20.0"
+python-dotenv = "^0.21.1"
+notion-client = "^2.0.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
