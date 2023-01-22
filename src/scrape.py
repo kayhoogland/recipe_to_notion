@@ -48,10 +48,6 @@ def instructions(l):
     return [numbered_item(i) for i in l]
 
 
-def page_url(i):
-    return f"notion.so/kayhoogland/{os.environ['DATABASE_ID']}&p={i}"
-
-
 def notion_request(url):
     scraper = scrape_me(url)
     parent = {"database_id": os.environ["DATABASE_ID"]}
@@ -70,4 +66,4 @@ def notion_request(url):
     response = client().pages.create(
         parent=parent, properties=properties, cover=cover, children=children
     )
-    return page_url(response["id"])
+    return response["url"]
