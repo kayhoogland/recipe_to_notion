@@ -45,9 +45,10 @@ def ingredients(l):
 
 
 def instructions(l):
-    return [bullet_item(i) for i in l]
+    return [numbered_item(i) for i in l]
 
-def page_url(i):    
+
+def page_url(i):
     return f"notion.so/kayhoogland/{os.environ['DATABASE_ID']}&p={i}"
 
 
