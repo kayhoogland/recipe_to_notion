@@ -1,6 +1,6 @@
 import os
 from notion_client import Client
-from recipe_scrapers import scrape_me
+from recipe_scrapers import scrape_html
 
 
 def client():
@@ -49,7 +49,7 @@ def instructions(l):
 
 
 def notion_request(url):
-    scraper = scrape_me(url)
+    scraper = scrape_html(html=None, org_url=url, online=True)
     parent = {"database_id": os.environ["DATABASE_ID"]}
     cover = {"external": {"url": scraper.image()}}
     properties = {

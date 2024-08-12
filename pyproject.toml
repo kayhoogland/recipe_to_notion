@@ -9,7 +9,7 @@ packages = [{include = "recipe_to_notion"}]
 [tool.poetry.dependencies]
 python = "^3.10"
 fastapi = "^0.89.1"
-recipe-scrapers = "^14.29.0"
+recipe-scrapers = "^15.0.0"
 uvicorn = "^0.20.0"
 python-dotenv = "^0.21.1"
 notion-client = "^2.0.0"
